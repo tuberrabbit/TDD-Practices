@@ -1,26 +1,15 @@
 module.exports = {
     apply: function (number) {
-        if (!(number % 105)) {
-            return 'fizzbuzzwhizz';
-        }
-        if (!(number % 35)) {
-            return 'buzzwhizz';
-        }
-        if (!(number % 21)) {
-            return 'fizzwhizz';
-        }
-        if (!(number % 15)) {
-            return 'fizzbuzz';
-        }
-        if (!(number % 7)) {
-            return 'whizz';
+        var result = [];
+        if (!(number % 3)) {
+            result.push('fizz');
         }
         if (!(number % 5)) {
-            return 'buzz';
+            result.push('buzz');
         }
-        if (!(number % 3)) {
-            return 'fizz';
+        if (!(number % 7)) {
+            result.push('whizz');
         }
-        return number;
+        return result.join('') || number;
     }
 };
