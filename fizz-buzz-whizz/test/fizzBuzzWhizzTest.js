@@ -50,4 +50,12 @@ describe('fizz buzz whizz test suite', function () {
         expect(fizzBuzzWhizz.apply(210)).to.equal('fizzbuzzwhizz');
     });
 
+    it('should return [1,2,fizz,4] when call range 1 to 4', function () {
+        expect(fizzBuzzWhizz.range(1, 4)).to.eql([1, 2, 'fizz', 4]);
+    });
+
+    it('should return [fizz,4,buzz,fizz] when call range 3 to 6', function () {
+        expect(fizzBuzzWhizz.range(3, 6)).to.eql(['fizz', 4, 'buzz', 'fizz']);
+    });
+    
 });

@@ -11,5 +11,12 @@ module.exports = {
             result.push('whizz');
         }
         return result.join('') || number;
+    },
+    range: function (beg, end) {
+        var result = [];
+        for (var i = beg; i <= end; i++) {
+            result.push(this.apply(i));
+        }
+        return result;
     }
 };
